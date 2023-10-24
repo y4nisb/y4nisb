@@ -6,13 +6,29 @@
     <text x="10" y="20" fill="limegreen" font-family="monospace">
         user@website:~$
         <tspan id="inputCommand" visibility="hidden">
-            grep name
+            g
             <set attributeName="visibility" to="visible" begin="1s" />
+            r
+            <set attributeName="visibility" to="visible" begin="1.1s" />
+            e
+            <set attributeName="visibility" to="visible" begin="1.2s" />
+            p
+            <set attributeName="visibility" to="visible" begin="1.3s" />
+            &nbsp;
+            <set attributeName="visibility" to="visible" begin="1.4s" />
+            n
+            <set attributeName="visibility" to="visible" begin="1.5s" />
+            a
+            <set attributeName="visibility" to="visible" begin="1.6s" />
+            m
+            <set attributeName="visibility" to="visible" begin="1.7s" />
+            e
+            <set attributeName="visibility" to="visible" begin="1.8s" />
         </tspan>
         <tspan id="underline" visibility="hidden">
             _
-            <set attributeName="visibility" to="visible" begin="0.5s" />
-            <animate attributeName="visibility" values="visible;hidden;visible;hidden" begin="0.5s" dur="1s" repeatCount="indefinite" />
+            <set attributeName="visibility" to="visible" begin="1.9s" />
+            <animate attributeName="visibility" values="visible;hidden;visible;hidden" begin="1.9s" dur="1s" repeatCount="indefinite" />
         </tspan>
     </text>
 
@@ -20,7 +36,7 @@
     <text x="10" y="40" fill="white" font-family="monospace">
         <tspan id="outputName" visibility="hidden">
             Yanis
-            <set attributeName="visibility" to="visible" begin="3s" />
+            <set attributeName="visibility" to="visible" begin="3.9s" />
         </tspan>
     </text>
 
@@ -28,7 +44,12 @@
     <text x="10" y="60" fill="limegreen" font-family="monospace">
         <tspan id="newCommandLine" visibility="hidden">
             user@website:~$
-            <set attributeName="visibility" to="visible" begin="5s" />
+            <set attributeName="visibility" to="visible" begin="3.9s" />
+        </tspan>
+        <tspan id="newUnderline" visibility="hidden">
+            _
+            <set attributeName="visibility" to="visible" begin="4s" />
+            <animate attributeName="visibility" values="visible;hidden;visible;hidden" begin="4s" dur="1s" repeatCount="indefinite" />
         </tspan>
     </text>
 </svg>
