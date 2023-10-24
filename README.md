@@ -1,1 +1,1 @@
-![Animated Terminal](https://rawcdn.githack.com/y4nisb/y4nisb/dc6ad54f27a6b32807dcd49d9b8cf61045593f90/terminal-animation.svg)
+![Animated Terminal GIF](https://rawcdn.githack.com/y4nisb/y4nisb/243ae7e23ac33889132b8645bde1dae9783f2325/Unbenanntes%20Video%20%E2%80%93%20Mit%20Clipchamp%20erstellt.gif)
