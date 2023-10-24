@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Terminal</title>
+  </head>
+  <body>
+    <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+      <rect width="250" height="100" fill="black" rx="10" ry="10" />
+      <text x="10" y="20" fill="limegreen" font-family="monospace">
+        user@website:~$
+        <tspan id="inputCommand"></tspan>
+        <tspan id="underline">_</tspan>
+      </text>
+      <text x="10" y="40" fill="white" font-family="monospace">
+        <tspan id="outputName"></tspan>
+      </text>
+      <text
+        x="10"
+        y="60"
+        fill="limegreen"
+        font-family="monospace"
+        id="newCommandLine"
+      >
+        user@website:~$
+      </text>
+    </svg>
+
+    <script>
+      const inputStr = "grep name";
+      const outputStr = "Yanis";
+      let inputIndex = 0;
+
+      function typeInput() {
+        if (inputIndex < inputStr.length) {
+          document.getElementById("inputCommand").textContent +=
+            inputStr[inputIndex];
+          inputIndex++;
+          setTimeout(typeInput, 100); // Adjust the number for typing speed
+        } else {
+          document.getElementById("underline").textContent = ""; // Remove underline
+          setTimeout(typeOutput, 500); // Delay before output appears
+        }
+      }
+
+      function typeOutput() {
+        document.getElementById("outputName").textContent = outputStr;
+        document.getElementById("newCommandLine").textContent =
+          "user@website:~$ ";
+        setTimeout(clearText, 2000);
+      }
+
+      function clearText() {
+        document.getElementById("inputCommand").textContent = "";
+        document.getElementById("outputName").textContent = "";
+        document.getElementById("newCommandLine").textContent = ""; // Clear the second terminal line
+        document.getElementById("underline").textContent = "_"; // Bring back the underline for a new line
+        inputIndex = 0; // Reset index
+        setTimeout(typeInput, 500); // Delay before restarting the input animation
+      }
+
+      // Start the typing animation
+      setTimeout(typeInput, 1000); // Wait 1 second before starting
+    </script>
+  </body>
+</html>
